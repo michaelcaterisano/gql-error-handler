@@ -26,7 +26,12 @@ export type RequestContextType = {
 };
 
 type ResponseType = {
-  errors: any[];
+  body: {
+    singleResult: {
+      data: any;
+      errors: any;
+    };
+  };
 };
 
 // object type representing schema as captured from requestContext object

@@ -125,9 +125,9 @@ const partialDataPlugin = {
 
         // add custom error message if invalid fields were present in original query
 
-        if (!response || !response.errors) {
+        if (!response || !response.body.singleResult.errors) {
           const errArray = errObjectParser(errorObj, typeFieldsCache);
-          if (errArray.length > 0) response.errors = errArray;
+          if (errArray.length > 0) response.body.singleResult.errors = errArray;
         }
       },
     };
